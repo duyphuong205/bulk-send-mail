@@ -28,7 +28,7 @@ public class BulkEmailMessage implements Serializable {
     @CollectionTable(name = "\"to\"", joinColumns = @JoinColumn(name = "bulk_email_message_id"))
     @Column(name = "\"to\"")
     List<String> to;
-    private String subject;
+    String subject;
     @Column(columnDefinition = "TEXT")
     String body;
     String status = AppConstants.STATUS_PENDING;
