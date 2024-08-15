@@ -1,0 +1,33 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: mail-bulk-kafka
+  datasource:
+    url: jdbc:mysql://localhost:3306/mail_bulk_kafka?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 111111
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  #send mail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: animeshop2462@gmail.com
+    password: yewnokvitnurtcsa
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  #kafka
+  kafka:
+    bootstrap-servers: localhost:9092
+    topic: emailMessageTopic
