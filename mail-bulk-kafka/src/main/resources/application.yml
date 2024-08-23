@@ -31,3 +31,8 @@ spring:
   kafka:
     bootstrap-servers: localhost:9092
     topic: emailMessageTopic
+
+#config log
+logging:
+  file:
+    name: /log/send-mail.log
